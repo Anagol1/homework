@@ -15,19 +15,21 @@ Console.WriteLine(digit2);
 
 //Задача 13. Написать программу, которая выводит третью цифру заданного числа или сообщает, 
 //что третьей цифры нет.
+*/
 int FindThirdDigit (int num)
 {   
-    int result = 0;
+    int result = -1;
     int num1 = num;
     while (num > 999){   //не понимаю, почему не срабатывает эта часть условия, при num > 999,программа зависает
-        num1 = num1 / 10;
-        
-        int thirdDigit1 = num1 % 10;
-        result = thirdDigit1;}
+        num1 = num / 10;
+        num = num1;
+    }
+        int thirdDigit1 = num % 10;
+        result = thirdDigit1;
     if (num < 100)
-       //Console.WriteLine($"number digits of {num} less than 3");
-        result = 0;
-    else if (num > 99 || num < 1000)
+       Console.WriteLine($"number digits of {num} less than 3");
+    
+    else if (num > 99 & num < 1000)
         {
         //Console.WriteLine($"Third digit of {num} is {num % 10}");
         int thirdDigit2 = num % 10; 
@@ -39,18 +41,8 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 int thirdDigit = FindThirdDigit(num);
 Console.WriteLine($"Third digit of {num} is {thirdDigit}");
-
 /*
-int num1 = num;
-    while (num1 > 999)
-        {
-        num1 = num1 / 10;
-        }
-    int thirdDigit = num1 % 10;
-    //int thirdDigit = res;
 
-Console.WriteLine($"Third digit of {num} is {thirdDigit}");
-*/
 //Задача 15. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
 
@@ -81,3 +73,4 @@ else
 {
     Console.WriteLine("$This is not holliday");
 }
+*/

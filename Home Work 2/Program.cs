@@ -20,7 +20,7 @@ int FindThirdDigit (int num)
 {   
     int result = -1;
     int num1 = num;
-    while (num > 999){   //не понимаю, почему не срабатывает эта часть условия, при num > 999,программа зависает
+    while (num > 999){   
         num1 = num / 10;
         num = num1;
     }
@@ -36,11 +36,12 @@ int FindThirdDigit (int num)
         result = thirdDigit2;}
     return result;    
 }
-Console.WriteLine("Input number: ");
+Console.WriteLine("Input number: "); 
 int num = Convert.ToInt32(Console.ReadLine());
 
 int thirdDigit = FindThirdDigit(num);
-Console.WriteLine($"Third digit of {num} is {thirdDigit}");
+Console.WriteLine($"Third digit of {num} is {thirdDigit}"); 
+// не удалось сделать так, чтобы при num < 99 выводился только один результат. В чеи ошибка, подскажите, пожалуйста 
 /*
 
 //Задача 15. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
